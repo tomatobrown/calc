@@ -18,8 +18,8 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Authenticate with npm
-      run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+    # - name: Authenticate with npm
+    #   run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
     - name: Install dependencies
       run: |

@@ -48,7 +48,9 @@ jobs:
         npm install
 
     - name: Run tests with coverage
-      run: npm run test:coverage
+      run: |
+        npm run test:coverage
+        coveralls < coverage/lcov.info
 
     - name: Coveralls
       uses: coverallsapp/github-action@v2

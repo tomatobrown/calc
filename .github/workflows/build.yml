@@ -23,6 +23,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        npm login
         npm install
         make test-coverage
 

@@ -1,6 +1,6 @@
 // test/calculator.test.js
 
-const { add, subtract } = require('../src/calculator');
+const { add, multiply, subtract } = require('../src/calculator');
 
 describe('Calculator', () => {
   describe('add', () => {
@@ -12,6 +12,12 @@ describe('Calculator', () => {
   describe('subtract', () => {
     it('should subtract two numbers correctly', () => {
       expect(subtract(5, 3)).toBe(2);
+    });
+  });
+
+  describe('multiply', () => {
+    it('should multiply two numbers correctly', () => {
+      expect(multiply(67, 1234)).toBe(82678);
     });
   });
 });

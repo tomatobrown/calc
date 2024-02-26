@@ -1,0 +1,11 @@
+{
+    "name": "calc",
+    "version": "1.0.0",
+    "description": "A simple JavaScript project with unit tests",
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "jest": "^27.5.1"
+    }
+}

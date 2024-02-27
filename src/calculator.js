@@ -28,5 +28,5 @@ function multiply5(a, b, c, d, e) {
   return a * b * c * d * e;
 }
 
-module.exports = { add, divide, multiply, subtract };
+module.exports = { add, divide, multiply, multiply3, multiply4, multiply5, subtract };
   

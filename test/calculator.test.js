@@ -1,5 +1,5 @@
 // test/calculator.test.js
-const { add, multiply, subtract } = require('../src/calculator');
+const { add, multiply, multiply3, subtract } = require('../src/calculator');
 
 describe('Calculator', () => {
   describe('add', () => {

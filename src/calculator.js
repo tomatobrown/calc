@@ -16,5 +16,17 @@ function multiply(a, b) {
   return a * b;
 }
 
+function multiply3(a, b, c) {
+  return a * b * c;
+}
+
+function multiply4(a, b, c, d) {
+  return a * b * c * d;
+}
+
+function multiply5(a, b, c, d, e) {
+  return a * b * c * d * e;
+}
+
 module.exports = { add, divide, multiply, subtract };
   

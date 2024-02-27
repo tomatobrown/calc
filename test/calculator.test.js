@@ -1,5 +1,5 @@
 // test/calculator.test.js
-
+const {Promise} = require('bluebird');
 const { add, multiply, subtract } = require('../src/calculator');
 
 describe('Calculator', () => {
@@ -20,4 +20,22 @@ describe('Calculator', () => {
       expect(multiply(67, 1234)).toBe(82678);
     });
   });
+
+  test('example test with delay', () => {
+    jest.useFakeTimers();
+    
+    const delay = async () => {
+      // Delay execution by 5 seconds
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      
+      // Your test assertions go here
+      expect(1 + 1).toBe(2);
+    };
+  
+    delay();
+  
+    // Advance timers by 5 seconds
+    jest.advanceTimersByTime(5000);
+  });
+  
 });

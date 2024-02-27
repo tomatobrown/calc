@@ -19,6 +19,10 @@ describe('Calculator', () => {
       expect(multiply(67, 1234)).toBe(82678);
     });
 
+    it('should multiply three numbers correctly', () => {
+      expect(multiply3(67, 1234, -2)).toBe(-165356);
+    });
+
     test('example test with delay', done => {
       setTimeout(() => {
         // Your test assertions go here

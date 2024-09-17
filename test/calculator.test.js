@@ -1,5 +1,5 @@
 // test/calculator.test.js
-const { add, multiply, multiply3, subtract } = require('../src/calculator');
+const { add, divide, multiply, multiply3, multiply4, multiply5, subtract, square, squareRoot, power } = require('../src/calculator');
 
 describe('Calculator', () => {
   describe('add', () => {
@@ -16,19 +16,47 @@ describe('Calculator', () => {
 
   describe('multiply', () => {
     it('should multiply two numbers correctly', () => {
-      expect(multiply(67, 1234)).toBe(82678);
+      expect(multiply({ a: 67, b: 1234 })).toBe(82678);
     });
 
     it('should multiply three numbers correctly', () => {
-      expect(multiply3(67, 1234, -2)).toBe(-165356);
+      expect(multiply3({ a: 67, b: 1234, c: -2 })).toBe(-165356);
     });
+  });
 
-    test('example test with delay', done => {
-      setTimeout(() => {
-        // Your test assertions go here
-        expect(1 + 1).toBe(2);
-        done(); // Call done() to indicate that the test is complete
-      }, 10000); // Increase the timeout to 10 seconds
-    }, 15000);
-  });  
+  describe('divide', () => {
+    it('should divide two numbers correctly', () => {
+      expect(divide({ a: 10, b: 2 })).toBe(5);
+    });
+  });
+
+  describe('square', () => {
+    it('should calculate the square of a number correctly', () => {
+      expect(square(4)).toBe(16);
+    });
+  });
+
+  describe('squareRoot', () => {
+    it('should calculate the square root of a number correctly', () => {
+      expect(squareRoot(16)).toBe(4);
+    });
+  });
+
+  describe('power', () => {
+    it('should calculate the power of a number correctly', () => {
+      expect(power({ a: 2, b: 3 })).toBe(8);
+    });
+  });
+
+  describe('multiply4', () => {
+    it('should multiply four numbers correctly', () => {
+      expect(multiply4({ a: 2, b: 3, c: 4, d: 5 })).toBe(120);
+    });
+  });
+
+  describe('multiply5', () => {
+    it('should multiply five numbers correctly', () => {
+      expect(multiply5({ a: 2, b: 3, c: 4, d: 5, e: 6 })).toBe(720);
+    });
+  });
 });

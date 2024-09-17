@@ -28,5 +28,16 @@ function multiply5(a, b, c, d, e) {
   return a * b * c * d * e;
 }
 
-module.exports = { add, divide, multiply, multiply3, multiply4, multiply5, subtract };
-  
+function square(a) {
+  return a * a;
+}
+
+function squareRoot(a) {
+  return Math.sqrt(a);
+}
+
+function power(a, b) {
+  return Math.pow(a, b);
+}
+
+module.exports = { add, divide, multiply, multiply3, multiply4, multiply5, subtract, square, squareRoot, power };  

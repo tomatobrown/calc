@@ -26,6 +26,6 @@ jobs:
 
     - name: Run CodeClimate Test Reporter
       env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        CODECLIMATE_REPO_TOKEN: ${{ secrets.CC_TEST_REPORTER_ID }}
       run: |
         codeclimate-test-reporter < coverage/lcov.info
